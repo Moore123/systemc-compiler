@@ -47,8 +47,8 @@ RUN cd /usr/local/src \
 RUN cd /usr/local/src \
 && wget -N https://ftp.gnu.org/gnu/gdb/gdb-11.2.tar.gz --no-check-certificate \
 && tar -xf gdb-11.2.tar.gz \
-&& cd gdb-11.2
-RUN  ./configure --prefix="$ICSC_HOME" --with-python="$(which python3)" \
+&& cd gdb-11.2 \
+&&  ./configure --prefix="$ICSC_HOME" --with-python="$(which python3)" \
 && make -j6 \
 && make install
 
@@ -56,8 +56,8 @@ RUN  ./configure --prefix="$ICSC_HOME" --with-python="$(which python3)" \
 ## && wget -N --no-check-certificate https://github.com/accellera-official/systemc/archive/refs/tags/2.3.3.tar.gz 
 ## RUN tar -zxf 2.3.3.tar.gz \
 ## && mkdir -p systemc-2.3.3/_build \
-## && cd systemc-2.3.3/_build
-## RUN CXXFLAGS="-std=c++17" ../configure --prefix=$ICSC_HOME \
+## && cd systemc-2.3.3/_build \
+## && CXXFLAGS="-std=c++17" ../configure --prefix=$ICSC_HOME \
 ## && make -j6 \
 ## && make install
 
