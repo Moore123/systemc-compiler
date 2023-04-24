@@ -1,4 +1,4 @@
-From ubuntu:kinetic
+From ubuntu:22.04
 ADD sources.list /etc/apt
 ENV ICSC_HOME=/usr/local
 ENV GCC_INSTALL_PREFIX=/usr
