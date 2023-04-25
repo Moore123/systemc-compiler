@@ -1,4 +1,4 @@
-From ubuntu:22.04
+From ubuntu:20.04
 ADD sources.list /etc/apt
 ENV ICSC_HOME=/usr/local
 ENV GCC_INSTALL_PREFIX=/usr
